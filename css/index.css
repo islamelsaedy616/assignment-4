@@ -1,0 +1,679 @@
+/* Global CSS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.coatainer {
+  width: 75%;
+  margin: auto;
+}
+.clear-fix {
+  clear: both;
+}
+.layers {
+  position: relative;
+  z-index: 999;
+}
+.float {
+  float: left;
+}
+
+/*----------------------------- Header start -----------------------------*/
+
+/* Navbar */
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./../image/hpme.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.header .navbar {
+  padding: 18px 0;
+}
+.header .navbar .logo {
+  float: left;
+}
+.header .navbar .logo a {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ff305b;
+}
+
+/* Menu */
+.header .navbar .menu {
+  float: right;
+}
+.header .navbar .menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .navbar .menu ul li a {
+  margin: 0 10px;
+  color: #ffffff;
+  transition: all 0.8s;
+}
+.header .navbar .menu ul li a:hover {
+  color: #ff305b;
+}
+
+/* Main Coatainer */
+.header .main {
+  padding-top: 220px;
+  text-align: center;
+}
+
+.header .main h3 {
+  color: #ffffff;
+  font-size: 24px;
+}
+.header .main h1 {
+  color: #ff305b;
+  font-size: 70px;
+}
+.header .main p {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 200;
+}
+
+/* Dark Overlay */
+.header .dark-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+/* Underline */
+.underline {
+  position: absolute;
+  width: 160px;
+  height: 1px;
+  bottom: 0;
+  left: 43.5%;
+  background-color: #ff305b;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: #ff305b;
+  bottom: 5px;
+  left: 27.5%;
+}
+.underline::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: #ff305b;
+  top: 5px;
+  left: 27.5%;
+}
+/*----------------------------- Header End -----------------------------*/
+
+/*----------------------------- About Area Strat  -----------------------------*/
+.about-area {
+  width: 100%;
+  padding: 100px 0;
+}
+.about-area .profile-photo {
+  width: 49%;
+  padding: 26px 0 0 26px;
+  overflow: hidden;
+}
+.about-area .profile-photo .personal-photo {
+  width: 70%;
+  position: relative;
+  z-index: 99;
+  margin: auto;
+}
+
+/* photo box */
+.about-area .profile-photo .personal-photo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -25px;
+  right: 25px;
+  border: solid 8px #555;
+  border-radius: 5px;
+  z-index: -1;
+}
+.about-area .profile-photo .personal-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+/*social-icon */
+.about-area .profile-photo .social-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding-top: 55%;
+  border-radius: 5px;
+  transform: translateY(100%);
+  transition: transform 0.5s, opacity 0.8s;
+  opacity: 0;
+}
+.about-area .profile-photo .social-icon a {
+  font-size: 20px;
+  color: #fff;
+  margin: 0 10px;
+  transition: color 0.5s;
+}
+
+/* Hover */
+
+/* social icon hover */
+.about-area .profile-photo .social-icon a:hover {
+  color: #ff305b;
+}
+
+/* profilephoto hover */
+.about-area .personal-photo:hover .social-icon {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* profile esc */
+.about-area .profile-desc {
+  width: 49%;
+}
+.about-area .profile-desc h2 {
+  font-size: 34px;
+  color: #333333;
+  font-weight: 600;
+  padding-left: 14px;
+  margin-bottom: 20px;
+  width: fit-content;
+  position: relative;
+  line-height: 22px;
+}
+.about-area .profile-desc h2::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #ff305b;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+.about-area .profile-desc p {
+  color: #555555;
+  line-height: 25px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #999999;
+}
+.about-area .profile-desc .info-column {
+  width: 49%;
+  margin-bottom: 20px;
+}
+.about-area .profile-info ul li {
+  margin-bottom: 18px;
+  color: #555;
+
+  list-style-type: none;
+}
+.about-area .profile-info ul li span {
+  color: #333333;
+  font-weight: 600;
+}
+.about-area .profile-desc ul li a {
+  color: #7e7e7e;
+}
+.about-area .profile-desc .info-btn a {
+  padding: 14px 25px;
+  margin-right: 10px;
+  background-color: #ff305b;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.8s;
+}
+.about-area .profile-desc .info-btn a:hover {
+  background-color: #ec2403;
+}
+/*----------------------------- About Area End -----------------------------*/
+
+/*----------------------------- Our Services strat -----------------------------*/
+.our-services {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.our-services .service-header {
+  position: relative;
+  margin-bottom: 40px;
+}
+.our-services .service-header h2 {
+  font-size: 40px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  color: #333333;
+}
+
+/* underline */
+.our-services .service-header .underline {
+  position: absolute;
+  width: 160px;
+  height: 1px;
+  bottom: 0;
+  left: 43.5%;
+  background-color: #ff305b;
+}
+.our-services .service-header .underline::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: #ff305b;
+  bottom: 5px;
+  left: 27.5%;
+}
+.our-services .service-header .underline::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: #ff305b;
+  top: 5px;
+  left: 27.5%;
+}
+
+/* services card */
+.our-services .services-card {
+  width: 25%;
+  padding: 40px 15px;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+.our-services .services-card i {
+  font-size: 32px;
+  color: #ff305b;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+.our-services .services-card h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.our-services .services-card p {
+  color: #555;
+  line-height: 25px;
+}
+
+/* hover */
+.our-services .services-card:hover {
+  background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+.our-services .services-card:hover i {
+  transform: scale(1.2);
+}
+/*----------------------------- Our Services End -----------------------------*/
+
+/*----------------------------- Our Portfolio strat -----------------------------*/
+.portfolio {
+  width: 100%;
+  padding: 100px 0;
+}
+.portfolio .portfolio-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.portfolio .portfolio-header h2 {
+  font-size: 40px;
+  color: #333;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+.portfolio .portfolio-links {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.portfolio .portfolio-links button {
+  padding: 3px 12px;
+  color: #333;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* portfolio-img */
+.portfolio .portfolio-imgs {
+  width: 33.333%;
+  padding: 15px;
+}
+.portfolio .portfolio-imgs img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio .portfolio-imgs .gap {
+  position: relative;
+}
+
+.portfolio .portfolio-imgs .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.portfolio .portfolio-imgs .inner i {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 25px;
+  color: #ff305b;
+}
+
+/* hover */
+.portfolio .portfolio-imgs:hover .inner {
+  opacity: 1;
+}
+/*----------------------------- Our Portfolio End -----------------------------*/
+
+/*----------------------------- Counter strat -----------------------------*/
+.counter {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #f1f1f1;
+}
+.counter .number-box {
+  width: 25%;
+  text-align: center;
+}
+.counter .number-box i {
+  font-size: 25px;
+  color: #ff305b;
+  margin-bottom: 10px;
+}
+
+.counter .number-box h3 {
+  font-size: 26px;
+  color: #333;
+}
+.counter .number-box h4 {
+  color: #555;
+  font-weight: 600;
+}
+/*----------------------------- Counter End -----------------------------*/
+
+/*----------------------------- Feedback Start -----------------------------*/
+.feedback {
+  width: 100%;
+  padding: 100px 0;
+}
+/* Header Feedback */
+.feedback .header-feedback {
+  position: relative;
+  text-align: center;
+}
+.feedback .header-feedback h2 {
+  padding-bottom: 15px;
+  font-size: 40px;
+  color: #333;
+}
+
+/* Person Feedback */
+.feedback .person-feedback {
+  width: 65%;
+  margin: auto;
+  padding: 40px;
+  border-radius: 5px;
+  margin-top: 40px;
+  background-color: #f1f1f1;
+  overflow: hidden;
+  position: relative;
+}
+.feedback .person-feedback .person-img {
+  width: 20%;
+}
+.feedback .person-feedback .person-img img {
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.feedback .person-feedback .person-img::after {
+  content: "";
+  width: 25%;
+  height: 70%;
+  position: absolute;
+  background-color: #ff305b;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.feedback .person-feedback .person-info {
+  width: 80%;
+  padding-left: 25px;
+}
+.feedback .person-feedback .person-info h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+.feedback .person-feedback .person-info h4 {
+  color: #777;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.feedback .person-feedback .person-info i {
+  padding-right: 5px;
+  font-size: 13px;
+}
+.feedback .person-feedback .person-info p {
+  font-style: italic;
+  color: #555;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.feedback .person-feedback .person-info .stars {
+  margin-bottom: 15px;
+  color: #f1c30d;
+}
+
+/* Dots */
+.feedback .dots {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.feedback .dots .first-dot {
+  width: 25px;
+  height: 10px;
+  display: inline-block;
+  background-color: #ff305b;
+  border-radius: 5px;
+}
+.feedback .dots .second-dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: solid 1px #ff305b;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+/*----------------------------- Feedback End -----------------------------*/
+
+/*----------------------------- Our Blog Start -----------------------------*/
+.our-blog {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 100px 0;
+}
+.our-blog .header-blog {
+  position: relative;
+  text-align: center;
+}
+.our-blog .header-blog h2 {
+  padding-bottom: 15px;
+  font-size: 40px;
+  color: #333;
+}
+
+/* blog-box */
+.our-blog .item {
+  margin-top: 40px;
+}
+.our-blog .item {
+  width: 33.333%;
+  padding: 15px;
+}
+.our-blog .item iframe {
+  width: 100%;
+}
+.our-blog .item .item-content {
+  padding: 20px;
+  color: #555;
+  background-color: #fff;
+}
+.our-blog .item .item-content .date {
+  margin-bottom: 10px;
+}
+.our-blog .item .item-content .post-btn {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  transition: 0.8s;
+}
+.our-blog .item .item-content .desc {
+  margin: 15px 0;
+  line-height: 25px;
+}
+.our-blog .item .item-content .more {
+  color: #333;
+  transition: 0.5s;
+}
+/* hover */
+.our-blog .item .item-content a:hover {
+  color: #ff305b;
+}
+/*----------------------------- Our Blog End -----------------------------*/
+
+/*----------------------------- Contact Us Start -----------------------------*/
+.contact-us {
+  width: 100%;
+  padding: 100px 0;
+}
+.contact-us .contact {
+  width: 80%;
+  margin: auto;
+}
+.contact-us .header-contact {
+  position: relative;
+  text-align: center;
+}
+.contact-us .header-contact h2 {
+  padding-bottom: 15px;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Form */
+.form {
+  width: 80%;
+  margin: auto;
+}
+.form .left {
+  float: left;
+  width: 50%;
+}
+.form .right {
+  float: right;
+  width: 50%;
+}
+.form .box-input {
+  padding: 10px 15px;
+}
+.form input,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: solid 1px #cccccc;
+  transition: 0.3s;
+}
+.form input::placeholder,
+textarea::placeholder {
+  color: #999999;
+  font-size: 14px;
+}
+.form input:focus,
+textarea:focus {
+  border: solid 1px #ff305b;
+  outline: none;
+}
+
+.form button {
+  background-color: #ff305b;
+  color: #fff;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+/* hover */
+.form button:hover {
+  background-color: #ec2403;
+}
+/*----------------------------- Contact Us End -----------------------------*/
+
+/*----------------------------- Footer Start -----------------------------*/
+.footer {
+  background-color: #333;
+  padding: 50px 0;
+  text-align: center;
+}
+.footer .footer-icons a {
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+}
+.footer p {
+  color: #fff;
+  margin-top: 13px;
+}
+.footer p a {
+  color: #ff305b;
+}
+/*----------------------------- Footer End -----------------------------*/
